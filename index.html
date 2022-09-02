@@ -449,6 +449,7 @@
             <use href="./img/icons-modal.svg#icon-close"></use>
           </svg>
         </button>
+
         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
         <form class="modal-form">
           <div class="input-field">
@@ -472,7 +473,7 @@
               <use href="./img/icons-modal.svg#icon-email"></use>
             </svg>
           </div>
-          <div class="input-field">
+          <div class="input-field field-comment">
             <label for="user-comment" class="input-label">Коментар</label>
             <textarea
               name="user-comment"
@@ -489,21 +490,19 @@
             />-->
           </div>
 
-          <div class="input-field">
+          <div class="input-field field-check">
             <input
-              class="input-check"
+              class="input-check visually-hidden"
               type="checkbox"
               name="user-policy"
               value="true"
               id="user-policy"
             />
-            <label for="user-policy" class="check-text">
-              Погоджуюся з розсилкою та приймаю
-              <a href="" class="check-link">Умови договору</a>
-            </label>
+            <label for="user-policy" class="check-text"> Погоджуюся з розсилкою та приймаю </label>
+            <a href="" class="check-link">Умови договору</a>
           </div>
 
-          <button type="submit" class="submit-btn">Відправити</button>
+          <button type="submit" class="submit-btn btn">Відправити</button>
         </form>
       </div>
     </div>
