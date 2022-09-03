@@ -450,6 +450,9 @@ body {
 .footer-item {
   margin-bottom: 9px;
 }
+.footer-soc {
+  margin-right: 93px;
+}
 .footer-soc-agitation {
   display: inline-block;
   margin-bottom: 20px;
@@ -484,6 +487,60 @@ body {
 }
 .footer-soc-link:hover .footer-soc-icon,
 .footer-soc-link:focus .footer-soc-icon {
+  fill: var(--primary-white-color);
+}
+
+.subscription-text {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: var(--typical-letter-spacing);
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.subscription-form {
+  display: flex;
+}
+.subscription-input {
+  min-width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscription-input:focus {
+  outline-color: var(--accent-color);
+}
+.subscription-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: var(--typical-letter-spacing);
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscription-btn {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: var(--primary-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-send {
+  margin-left: 10px;
   fill: var(--primary-white-color);
 }
 
@@ -524,10 +581,18 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
+
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal-close-icon {
+  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close:focus .modal-close-icon {
+  fill: var(--accent-color);
 }
 
 .backdrop.is-hidden {
@@ -552,9 +617,6 @@ body {
   position: relative;
   margin-bottom: 10px;
 }
-/*.input-field:not() {
-  margin-bottom: 20px;
-}*/
 .input-label {
   display: block;
   margin-bottom: 4px;
@@ -570,8 +632,11 @@ body {
   border-radius: 4px;
   padding-left: 42px;
   padding-right: 12px;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.form-input:focus {
+  outline-color: var(--accent-color);
+}
 .form-input::placeholder,
 .comment-text {
   font-size: 12px;
@@ -595,32 +660,58 @@ body {
   top: 50%;
   left: 12px;
   /*transform: translateY(-50%);*/
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/*.checkbox {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  margin-bottom: 30px;
-}*/
+.form-input:focus + .modal-contacts-icon {
+  fill: var(--accent-color);
+}
 .field-check {
   display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
-.check-text,
-.check-link {
+.check-text {
   display: flex;
   align-items: center;
+  margin-right: 5px;
+}
+.check-text span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: var(--typical-letter-spacing);
   color: var(--primary-text-color);
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 3px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.check-text {
-  margin-right: 5px;
+.icon-check {
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.check-text::before {
+.input-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.input-check:checked + .check-text .icon-check {
+  fill: #ffffff;
+}
+.input-check:focus + .check-text span {
+  border-color: var(--accent-color);
+}
+.check-link {
+  color: var(--accent-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: var(--typical-letter-spacing);
+}
+/*.check-text::before {
   content: '';
   width: 16px;
   height: 15px;
@@ -639,7 +730,7 @@ body {
   border: none;
   background-repeat: no-repeat;
   background-position: center;
-}
+}*/
 
 .submit-btn {
   margin: 0 auto;
