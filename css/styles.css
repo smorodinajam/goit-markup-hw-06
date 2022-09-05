@@ -450,9 +450,9 @@ body {
 .footer-item {
   margin-bottom: 9px;
 }
-.footer-soc {
+/*.footer-soc {
   margin-right: 93px;
-}
+}*/
 .footer-soc-agitation {
   display: inline-block;
   margin-bottom: 20px;
@@ -490,6 +490,9 @@ body {
   fill: var(--primary-white-color);
 }
 
+.footer-subscription {
+  margin-left: auto;
+}
 .subscription-text {
   display: inline-block;
   margin-bottom: 20px;
@@ -498,7 +501,7 @@ body {
   line-height: 1.14;
   letter-spacing: var(--typical-letter-spacing);
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-white-color);
 }
 .subscription-form {
   display: flex;
@@ -507,6 +510,7 @@ body {
   min-width: 358px;
   height: 50px;
   background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -591,6 +595,7 @@ body {
   fill: #000000;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon {
   fill: var(--accent-color);
 }
@@ -667,6 +672,7 @@ body {
 }
 .field-check {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
